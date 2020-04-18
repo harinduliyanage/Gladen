@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {environment} from '../../../environments/environment';
 
 @Component({
   selector: 'app-footer',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FooterComponent implements OnInit {
 
+  env: string;
+  isProduction: boolean;
+
   constructor() { }
 
   ngOnInit(): void {
+    this.env = environment.env;
+    this.isProduction = environment.production;
   }
 
 }
