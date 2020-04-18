@@ -1,0 +1,7 @@
+version: "3.7"
+services:
+  gladen-front-end:
+    build: ./front-end/gladen-web
+    ports:
+      - "80:80"
+    restart: always
