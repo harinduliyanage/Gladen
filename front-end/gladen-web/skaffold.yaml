@@ -1,0 +1,11 @@
+apiVersion: skaffold/v2beta1
+kind: Config
+metadata:
+  name: gladen-web
+build:
+  artifacts:
+  - image: gladen-web
+deploy:
+  kubectl:
+    manifests:
+    - k8s/deployment.yml
